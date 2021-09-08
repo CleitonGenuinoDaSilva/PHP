@@ -3,7 +3,7 @@ Token do GitHub
 git status
 git add *.* 
 git commmit -m "Atualização"
-git push -u 'php' 'desenv'
+git push -u 'https://github.com/CleitonGenuinoDaSilva/php.git' 'desenv'
 
 Caso não solicite o usuário e senha seguir esse tutorial:
 https://stackoverflow.com/questions/15381198/remove-credentials-from-git
