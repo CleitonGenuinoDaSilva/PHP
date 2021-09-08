@@ -3,16 +3,19 @@ class Usuario
 {
 
     private $pdo;
-    public $msgError = "";
 
     public function conectar()
-    {
+    { 
+        /* create database desenv;*/
+        /* USE desenv;*/
+        /* create table usuarios( id_usuario int AUTO_INCREMENT PRIMARY key,nome varchar(30),telefone varchar(30),email varchar(40),senha varchar(32));*/
         global $pdo;
         global $msgError;
+        $msgError = "";
         $nome    = "desenv";
-        $host    = "35.199.80.97";
-        $usuario = "root";
-        $senha   = "keyword";
+        $host    = "127.0.0.1";
+        $usuario = "icfcurso";
+        $senha   = "icf@advpl";
         try {
             //Controle de excessão
             $pdo = new PDO("mysql:dbname=".$nome.";host=".$host, $usuario, $senha);
@@ -25,7 +28,6 @@ class Usuario
 
     public function cadastrar($nome, $telefone, $email, $senha){
         global $pdo;
-        global $msgError;
         // Verificar se já existe e-mail cadastrado
         $sql = $pdo->prepare("SELECT ID_USUARIO FROM usuarios WHERE email = :e");
         $sql->bindValue(":e",$email);
@@ -49,7 +51,6 @@ class Usuario
 
     public function logar($email, $senha){
         global $pdo;
-        global $msgError;
         $sql = $pdo->prepare("SELECT id_usuario FROM usuarios where email = :e AND senha = :s");
         $sql->bindValue(":e",$email);
         $sql->bindValue(":s",md5($senha));

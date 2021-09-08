@@ -35,7 +35,7 @@
             /*Verifica se está vaziu*/
             if ( !empty($nome) && !empty($telefone) && !empty($email) && !empty($senha)&& !empty($confirmaSenha) )  
             {       
-                if( $u->conectar() && $u->msgError == "" )
+                if( $u->conectar())
                 {/*Se estiver em branco não deu erro de conexão*/
                     if($senha == $confirmaSenha)
                     {
@@ -67,7 +67,7 @@
                 else
                 { ?>
                 <div class="msg-erro">
-                    <?php echo "Erro:".$u->msgError; ?>
+                    <?php echo "Erro:".$msgError; ?>
                 </div>
                 <?php
                 }
