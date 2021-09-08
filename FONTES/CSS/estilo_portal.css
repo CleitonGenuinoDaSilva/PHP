@@ -1,0 +1,39 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    font-family: arial;
+    background: url("../IMAGENS/fundo_site.jpg");
+    background-size: 150%;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 0px 30px;
+}
+a:hover{
+    background-color: rgba(255,255,255,.3);
+}
+nav{
+    background-color: black;
+    height: 50px;
+
+}
+ul#ul-principal{
+    background-color: black;
+    width: 90%;
+    margin: auto;
+}
+.li-p{
+    line-height: 50px;
+    float: left;
+}
+ul li ul li {
+    background-color: black;
+
+}
