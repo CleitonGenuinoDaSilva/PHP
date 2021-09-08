@@ -1,4 +1,13 @@
+Token do GitHub
+
 git status
 git add *.* 
 git commmit -m "Atualização"
-git push -u origin desenv
+git push -u 'php' 'desenv'
+
+Caso não solicite o usuário e senha seguir esse tutorial:
+https://stackoverflow.com/questions/15381198/remove-credentials-from-git
+
+Será necessário remover a senha salva no Windows e depois gerar um token de acesso
+
+https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-token
