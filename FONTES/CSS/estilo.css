@@ -5,9 +5,11 @@
 body{
     /*Tem que sair da pasta CSS e ir para imagens*/
     background-image: url("../IMAGENS/fundo_01.jpg");
-    background-position: 50% 70%;
+    /* e agora a regra de ouro que fará a imagem ocupar todo o viewport */
+    background-size: 100% 100%;
     color: white;
     font-family: arial;
+    
 }
 
 input{
